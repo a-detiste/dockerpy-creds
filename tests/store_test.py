@@ -3,7 +3,6 @@ import random
 import sys
 
 import pytest
-import six
 from distutils.spawn import find_executable
 
 from dockerpycreds import (
@@ -12,7 +11,7 @@ from dockerpycreds import (
 )
 
 
-class TestStore(object):
+class TestStore:
     def teardown_method(self):
         for server in self.tmp_keys:
             try:
@@ -61,7 +60,7 @@ class TestStore(object):
 
     def test_unicode_strings(self):
         key = self.get_random_servername()
-        key = six.u(key)
+        key = str(key)
         self.store.store(server=key, username='user', secret='pass')
         data = self.store.get(key)
         assert data

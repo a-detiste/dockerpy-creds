@@ -8,7 +8,6 @@ ROOT_DIR = os.path.dirname(__file__)
 SOURCE_DIR = os.path.join(ROOT_DIR)
 
 requirements = [
-    'six >= 1.4.0',
 ]
 
 version = None
@@ -37,7 +36,7 @@ setup(
     tests_require=test_requirements,
     zip_safe=False,
     test_suite='tests',
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+    python_requires='>=3.4',
 
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -45,8 +44,6 @@ setup(
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
